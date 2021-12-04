@@ -3,11 +3,11 @@ from matplotlib import pyplot as plt
 from IPython.display import clear_output
 from sklearn.model_selection import train_test_split
 
-//Загрузка обучающих и тестовых данных
+# Загрузка обучающих и тестовых данных
 data_train = np.loadtxt('D:/train.txt', delimiter=',')
 data_test = np.loadtxt('D:/test.txt', delimiter=',')
 
-//Разделим значения x и y
+# Разделим значения x и y
 X_train = data_train[:,0]
 y_train = data_train[:,1]
 
@@ -238,7 +238,7 @@ for i in range(200):
     else:
         X_t_y += y_new * poly_new.T
     
-    // the rest of code is just bells and whistles
+    # the rest of code is just bells and whistles
     if (i+1)%5==0:
         clear_output(True)
         plt.plot(x_grid,y_grid, color='blue', label='true f')
@@ -257,5 +257,5 @@ for j = 1...n:
         q_j = q_j - r_ij * q_i
     r_jj = |q_j|
     if r_jj == 0: # a_j in <a_1,...,a_j-1>
-        //What would you do in this case?..
+        #What would you do in this case?..
     q_j = q_j / r_jj
